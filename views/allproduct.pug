@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title All Products
+    link(rel="stylesheet", href="/style.css")
+  body
+    h1 Product List
+
+    if product && product.length
+      ul
+        each item, index in product
+          li
+            | #{index + 1}. #{item.name} - ₹#{item.price}
+            |  
+            a(href="/edit/" + item.id) Edit
+            |  
+            a(href="/delete/" + item.id) Delete
+    else
+      p No products available.
+
+    a(href="/add") Add New Product

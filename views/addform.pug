@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Add Product
+    link(rel="stylesheet", href="/style.css")
+  body
+    h1 Add New Product
+
+    form(action="/add" method="POST")
+      label(for="name") Product Name:
+      input(type="text" name="name" id="name" required)
+      br
+
+      label(for="price") Product Price:
+      input(type="number" name="price" id="price" required)
+      br
+
+      button(type="submit") Add Product
+
+    br
+    a(href="/") Back to Product List
